@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Akhir: Membuat Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body >
+    <header >
+        <h1><i class="fas fa-spa"></i> Cari Tempat Healing</h1>
+        <nav>
+            <ul>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#books"> Bookings</a></li>
+                <li><a href="#trend">Trendings</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons" >
+            <button class="">Log in</button>
+            <button class="signup button-1"> Sign up</button>
+        </div>
+
+        <button id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    </header>
+
+    <main>
+        <article class="hero" id="destinations">
+            <img src="https://source.unsplash.com/random/?architecture,resort,house" alt="Hero Image">
+            <div class="hero-content">
+                <h1>Where Do You Want to Go?</h1>
+                <p>Find your perfect healing destination.</p>
+                <div class="hero-buttons">
+                    <button class="prev-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button class="next-btn"><i class="fas fa-arrow-right"></i> Next</button>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="search-filters" id="books">
+            <div class="filter">
+                <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+                <input type="text" placeholder="Enter destination">
+            </div>
+            <div class="filter">
+                <h4><i class="fas fa-swimmer"></i> Activity</h4>
+                <select>
+                    <option>Swimming</option>
+                    <option>Hiking</option>
+                    <option>Yoga</option>
+                </select>
+            </div>
+            <div class="filter">
+                <h4><i class="fas fa-calendar-alt"></i> Date</h4>
+                <input type="date">
+            </div>
+            <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+        </article>
+
+        <article class="trending" id="trend">
+            <h3>Trending in 2023</h3>
+            <p>Resorts that will clear your mind.</p>
+            <div class="slider-wrapper">
+                <div class="resort-carousel" id="resort-carousel">
+                    <!-- Resort 1 -->
+                    <div class="resort">
+                        <img src="https://source.unsplash.com/random/300x200?resort" alt="Resort Image">
+                        <h4>Resort Name</h4>
+                        <p>Details about the resort.</p>
+                        <button class="book-btn"><i class="fas fa-book"></i> Book</button>
+                    </div>
+                    <!-- Resort 2 -->
+                    <div class="resort">
+                        <img src="https://source.unsplash.com/random/300x200?beach-resort1" alt="Resort Image">
+                        <h4>Resort Name</h4>
+                        <p>Details about the resort.</p>
+                        <button class="book-btn"><i class="fas fa-book"></i> Book</button>
+                    </div>
+                    <!-- ... -->
+                    <!-- Resort 2 -->
+                    <div class="resort">
+                        <img src="https://source.unsplash.com/random/300x200?beach-resort2" alt="Resort Image">
+                        <h4>Resort Name</h4>
+                        <p>Details about the resort.</p>
+                        <button class="book-btn"><i class="fas fa-book"></i> Book</button>
+                    </div>
+                    <!-- ... -->
+                    <!-- Resort 2 -->
+                    <div class="resort">
+                        <img src="https://source.unsplash.com/random/300x200?beach-resort3" alt="Resort Image">
+                        <h4>Resort Name</h4>
+                        <p>Details about the resort.</p>
+                        <button class="book-btn"><i class="fas fa-book"></i> Book</button>
+                    </div>
+                    <!-- ... -->
+                    <!-- Resort 2 -->
+                    <div class="resort">
+                        <img src="https://source.unsplash.com/random/300x200?beach-resort4" alt="Resort Image">
+                        <h4>Resort Name</h4>
+                        <p>Details about the resort.</p>
+                        <button class="book-btn"><i class="fas fa-book"></i> Book</button>
+                    </div>
+                    <!-- ... -->
+                </div>
+            </div>
+            <button class="prev-btn" id="carousel-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+            <button class="next-btn" id="carousel-next"><i class="fas fa-arrow-right"></i> Next</button>
+        </article>
+
+        <aside class="bio">
+            <img src="/images/me.png" alt="Muhammad Zulzidan M" class="bio-image">
+            <div>
+                <h2>MUHAMMAD ZULZIDAN M</h2>
+                <p>081354789375 | <a href="mailto:zulzdn@gmail.com">zulzdn@gmail.com</a> | <a
+                        href="https://linkedin.com/in/muhzulzidan" target="_blank">LinkedIn</a> | <a
+                        href="https://zulzidan.com" target="_blank">Website</a> | <a
+                        href="https://fiverr.com/muhzulzidan" target="_blank">Fiverr</a></p>
+                <p>Perumnas Tibojong blok A No 49</p>
+                <p>Bone, Indonesia</p>
+                <p>A bachelor's degree in IAIN Bone. With experience since 2019...</p>
+                <p></p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p><i class="fas fa-copyright"></i> 2023, All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
