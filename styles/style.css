@@ -42,9 +42,22 @@ header {
 }
 
 header h1 {
-  font-family: 'Georgia, serif';
+  font-family: "Georgia, serif";
   font-size: 1.5em;
   margin: 0;
+}
+
+header .nav {
+  display: none;
+  text-align: center;
+}
+header .auth-buttons {
+  display: none;
+}
+
+header .menu-icon {
+  display: block;
+  cursor: pointer;
 }
 
 header nav ul {
@@ -63,8 +76,13 @@ header nav ul li a:hover {
   color: #fff3e0;
 }
 
-.auth-buttons {
-  display: flex;
+/* Menu Icon */
+.menu-icon .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 3px auto;
+  background-color: #333;
 }
 
 button {
@@ -80,7 +98,6 @@ button:hover {
   background: #ff4500;
   color: white;
 }
-
 
 button {
   list-style: none;
@@ -133,8 +150,8 @@ button:hover {
 /* Main Content */
 main {
   padding: 20px;
-  gap:1em;
-  display:flex;
+  gap: 1em;
+  display: flex;
   flex-direction: column;
 }
 
@@ -147,9 +164,8 @@ main {
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 80%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
-  
 }
 
 /* Social Media Icons */
@@ -370,91 +386,24 @@ main {
   text-decoration: underline;
 }
 
-/* For smaller screens */
-@media screen and (max-width: 768px) {
+
+@media only screen and (min-width: 600px) {
   main {
     flex-direction: column;
   }
-}
-/* Add this to your existing CSS */
-
-/* Menu Icon */
-.menu-icon .bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 3px auto;
-  background-color: #333;
-}
-
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-  /* Hide the navigation menu and show the menu icon */
-  header nav {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-
-  header .menu-icon {
-    display: block;
-    cursor: pointer;
-  }
-
   /* Show the navigation menu when menu is toggled */
   header nav.active {
-    display: block;
+    display: none;
   }
-}
+  header .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  header .auth-buttons {
+    display: flex;
+  }
 
-/* Elegant Header */
-header {
-  background: linear-gradient(to right, #ffa500, #ff4500);
-  padding: 1em 2em;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-  font-family: 'Georgia, serif';
-  font-size: 1.5em;
-  margin: 0;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1em;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  color: #fff3e0;
-}
-
-.auth-buttons {
-  display: flex;
-}
-
-button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  background: white;
-  color: #ff4500;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-  background: #ff4500;
-  color: white;
+  header .nav {
+    display: flex;
+  }
 }
