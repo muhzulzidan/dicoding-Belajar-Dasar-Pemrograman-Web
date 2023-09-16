@@ -25,20 +25,25 @@ main > aside {
 header,
 footer {
   background-color: #f4f4f4;
-  padding: 1em;
+
   text-align: center;
   width: 100%;
 }
 /* Updated Header Styles */
 header {
   background: linear-gradient(to right, #ffa500, #ff4500);
+  z-index: 999;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header > nav {
   padding: 1em 2em;
+
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -51,6 +56,34 @@ header .nav {
   display: none;
   text-align: center;
 }
+
+/* Show the navigation menu when menu is toggled */
+header .nav.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  width: 100%;
+  background: linear-gradient(to right, #ffa500, #ff4500);
+  z-index: 999;
+}
+
+header .nav.active ul {
+  flex-direction: column;
+  width: 100%;
+  padding:0px;
+  margin:0px;
+margin-top:1em;
+}
+header .nav.active .auth-buttons {
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  margin-top:1em;
+    margin-bottom:1em;
+}
+
 header .auth-buttons {
   display: none;
 }
@@ -149,10 +182,10 @@ button:hover {
 
 /* Main Content */
 main {
-  padding: 20px;
   gap: 1em;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .bio,
@@ -386,14 +419,13 @@ main {
   text-decoration: underline;
 }
 
-
 @media only screen and (min-width: 600px) {
   main {
     flex-direction: column;
   }
   /* Show the navigation menu when menu is toggled */
-  header nav.active {
-    display: none;
+  header .nav.active {
+    display: flex;
   }
   header .menu-icon {
     display: none;
@@ -402,7 +434,9 @@ main {
   header .auth-buttons {
     display: flex;
   }
-
+header .nav .auth-buttons {
+display: none;
+}
   header .nav {
     display: flex;
   }

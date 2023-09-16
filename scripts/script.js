@@ -49,9 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // Add this to your existing JavaScript or create a new script.js file
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
-    const nav = document.querySelector("header nav");
+    const nav = document.querySelector("header nav nav");
 
     menuToggle.addEventListener("click", function () {
         nav.classList.toggle("active");
     });
 });
+
